@@ -16,6 +16,13 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa 
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          if_key_exists: fail 
       - uses: hashicorp/setup-terraform@v3
       - name: Terraform fmt
         id: fmt
