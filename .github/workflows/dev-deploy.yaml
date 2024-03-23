@@ -47,10 +47,10 @@ jobs:
 
       - name: Terraform Apply
         id: apply
-        run: terraform apply tfplan --auto-approve
+        run: terraform apply -auto-approve tfplan 
 
       - name: Terraform Destroy
         id: destroy
-        run: terraform destroy --auto-approve
+        run: terraform destroy -auto-approve
 
 
