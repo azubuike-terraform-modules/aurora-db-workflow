@@ -17,6 +17,7 @@ on:
 jobs:
   Depoy-with-terraform:
     runs-on: ubuntu-22.04
+    environment: AWS
     steps:
       - uses: actions/checkout@v4
       - name: Install SSH key
