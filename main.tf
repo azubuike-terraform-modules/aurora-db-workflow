@@ -10,6 +10,9 @@ module "dev-aurora-db" {
   master_password         = "brukutu1234"
   backup_retention_period = 5
   db_count                = 1
-  tier = "Dev"
-  group = "scheduled shutdown"
+  db_tags = {
+    tier = "Dev"
+    group = "scheduled shutdown"
+  }
+
 }
