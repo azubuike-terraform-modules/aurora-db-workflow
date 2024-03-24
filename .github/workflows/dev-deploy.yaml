@@ -49,7 +49,7 @@ jobs:
         id: apply
         run: terraform apply -auto-approve tfplan 
 
-      - uses: actions/manual-approval@v1
+      - uses:  trstringer/manual-approval@v1
         with:
           title: "Destroy Resources"
           message: "This workflow will destroy the deployed resources"     
