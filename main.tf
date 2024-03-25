@@ -12,7 +12,7 @@ module "dev-aurora-db" {
   db_count                = 1
   kms_key_id = "arn:aws:kms:us-east-1:443678878678:key/9e940d0b-8bfe-4cab-9ec3-076c99b1722b"
   vpc_security_group_ids = ["sg-0c82fd5b97438e899",]
-  db_subnet_group_name = "aurora-subnets"
+  # private_subnets = ["subnet-0ca7c62774a9f4b04","subnet-0e951da413a28918c"]
   db_tags = {
     tier = "Dev"
     group = "scheduled shutdown"
